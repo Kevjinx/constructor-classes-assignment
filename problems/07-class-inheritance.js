@@ -59,7 +59,12 @@ class Message {
   }
 }
 
-class Email extends Message{}
+class Email extends Message{
+  constructor(recipient, sender, subject, text) {
+    super(recipient, sender, text);
+    this.subject = subject
+  }
+}
 
 
 const message1 = new Email('sally@smith.com', 'john@smith.com',
